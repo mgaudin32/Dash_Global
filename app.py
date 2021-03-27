@@ -7,16 +7,16 @@ import plotly.express as px
 import dash_bootstrap_components as dbc
 from plotly import graph_objs as go
 import dash_auth
-from users import VALID_USERNAME_PASSWORD_PAIRS
+# from users import VALID_USERNAME_PASSWORD_PAIRS
 # from decouple import config
 
-# userID = config('userID',default='')
-# password = config('password',default='')
+userID = ENV('Username')
+password = ENV('Password')
 
 
-# VALID_USERNAME_PASSWORD_PAIRS = {
-#     userID: password
-# }
+VALID_USERNAME_PASSWORD_PAIRS = {
+     userID: password
+ }
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
