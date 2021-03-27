@@ -11,8 +11,8 @@ import os
 # from users import VALID_USERNAME_PASSWORD_PAIRS
 # from decouple import config
 
-userID = os.env('Username')
-password = os.env('Password')
+userID = os.environ.get('Username')
+password = os.environ.get('Password')
 
 
 VALID_USERNAME_PASSWORD_PAIRS = {
